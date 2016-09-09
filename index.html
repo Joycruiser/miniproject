@@ -1,11 +1,17 @@
+<!DOCTYPE html>
 <html>
   <head>
 	<base href="/">
     <title>Angular 2 QuickStart</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles.css">
-	<link rel="stylesheet" href="css/comp.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" type="text/css"
+          href="https://fonts.googleapis.com/css?family=Source+Sans+Pro">
+	<link rel="stylesheet" href="node_modules/slider-pro/dist/css/slider-pro.css"/>
+	
+	    <link rel="stylesheet" href="node_modules/ion-rangeslider/css/ion.rangeSlider.css" />
+    <link rel="stylesheet" href="node_modules/ion-rangeslider/css/ion.rangeSlider.skinHTML5.css" />
 
     <!-- Polyfill(s) for older browsers -->
     <script src="node_modules/core-js/client/shim.min.js"></script>
@@ -13,6 +19,8 @@
     <script src="node_modules/zone.js/dist/zone.js"></script>
     <script src="node_modules/reflect-metadata/Reflect.js"></script>
     <script src="node_modules/systemjs/dist/system.src.js"></script>
+	
+
 
     <script src="systemjs.config.js"></script>
     <script>
@@ -21,6 +29,61 @@
   </head>
 
   <body>
+  <div class="row">
+	<div class="col_12">
+	<div id="gp-kontakt-row" >
+		<a id="gp-phone" href="tel:+0902234466">
+			090 - 223 44 66
+		</a>
+		<a id="gp-mail" href="mailto:help@trendd.com">
+			help@trendd.com
+		</a>
+	</div>
+	</div>
+  </div>
+  <div class="row">
+	<div class="col_6" ><img alt="logo" src="images/logo.png" /></div>
+	<div class="col_6" >
+			<nav id="gp-navigation">
+				<ul>
+					<li>		
+						<a class="cart" href="/#">
+							<img alt="cart" src="images/icons/cart.png"/>
+						</a>
+					</li>
+					<li>		
+						<a href="/#" class="login-btn pure">
+							LOGIN
+						</a>
+					</li>
+					<li>		
+						<a class="btn pure" href="/#">
+							REGISTER
+						</a>
+					</li>
+				</ul>
+			</nav>
+	</div>
+  </div>
+  <script src="node_modules/slider-pro/libs/jquery-1.11.0.min.js"></script>
+<script src="node_modules/ion-rangeslider/js/ion.rangeSlider.js"></script>
     <my-app>Loading...</my-app>
+	
+	<script src="node_modules/slider-pro/dist/js/jquery.sliderPro.js"></script>
+		
+	<script type="text/javascript">
+    jQuery( document ).ready(function( $ ) {
+		$(document).on('click','#responsive-button', function(e) {
+			e.preventDefault();
+			$( "header" ).slideToggle();
+			$( "#responsive-button" ).attr("id","responsive-button-clicked");
+		})
+		$(document).on('click','#responsive-button-clicked', function(e) {
+			e.preventDefault();
+			$( "header" ).slideToggle();
+			$( "#responsive-button-clicked" ).attr("id","responsive-button");
+		})
+	});
+</script> 
   </body>
 </html>
