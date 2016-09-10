@@ -1,0 +1,68 @@
+@import 'declarations';
+
+#footer-menu {
+
+	.footer-logo {
+	float:none !important;
+	}
+
+	li {
+	list-style-type: none;
+	display: list-item;
+	padding: 0px !important;
+	
+	a {
+	border-right:1px solid transparent !important;
+	}
+	
+	}
+	
+	.icons-set {
+	float:none !important;
+	text-align: center;
+	}
+	
+	.footer-icon {
+		display: inline-block;
+	}
+
+	
+}
+
+header {
+display:none;
+margin-top:-11px;
+width:310px;
+position: absolute;
+right: 5px;
+
+#top-menu {
+border-top:1px solid white;
+text-align: center;
+width: auto;
+display: inherit;
+
+	li {
+	list-style-type: none;
+	display: list-item;
+	
+	a {
+	border-right:1px solid transparent;
+	}
+	}
+	
+	li:nth-of-type(6) {
+	display:none;
+	}
+}
+
+}
+
+.responsive-menu {
+display:flex;
+}
+
+.fullwidth-row-slider {
+margin-top:-10px;
+}
+
