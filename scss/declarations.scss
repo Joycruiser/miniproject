@@ -1,0 +1,36 @@
+$basic-font : 'Source Sans Pro', serif;
+$basic-bg-color : #f2f2f2;
+$base-text-align: initial;
+$base-color: initial;
+$base-decoration: none;
+$base-text-size: initial;
+$page-width: 960px;
+$column-width: 950px;
+$page-full-width:100%;
+$tablet-screen-width:767px;
+$mobile-screen-width:479px;
+$mobile-small-screen-width:320px;
+
+@mixin header-menu-buttons($size, $background-color, $color, $decoration, $case) {
+  font-size: $size;
+  background: $background-color;
+  color: $color;
+  text-decoration: $decoration;
+  text-transform: $case;
+}
+
+
+
+@mixin text($size, $color: $base-color, $textdirection: $base-text-align) {
+  font-size: $size;
+  color: $color;
+  text-align: $textdirection;
+}
+
+@mixin a-tag($textsize: $base-text-size, $color: $base-color, $textdecoration: $base-decoration) {
+
+font-size: $textsize;
+color: $color;
+text-decoration:$textdecoration;
+
+}
