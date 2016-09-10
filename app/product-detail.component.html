@@ -1,0 +1,238 @@
+
+<div class="row">
+<div class="col_12">
+<div><a href="#" class="filter-slogan" >FILTER</a></div>
+</div>
+<div class="col_12 flex product-options-row">
+<div class="flex_col_4 flex_col_4_left">
+<div>BRANDS</div>
+<div>
+	<ul>
+		<li>
+			<a href="/#">adidas</a>
+		</li>
+		<li>
+			<a href="/#">nike</a>
+		</li>
+		<li>
+			<a href="/#">camper</a>
+		</li>
+		<li>
+			<a href="/#">superga</a>
+		</li>
+		<li>
+			<a href="/#">timberland</a>
+		</li>
+		<li>
+			<a href="/#">new balance</a>
+		</li>
+		<li>
+			<a href="/#">converse</a>
+		</li>
+		<li>
+			<a href="/#">puma</a>
+		</li>
+		<li>
+			<a href="/#">kinetix</a>
+		</li>
+	</ul>
+</div>
+
+<div>
+	<ul>
+		<li>
+			<a href="/#">tiger</a>
+		</li>
+		<li>
+			<a href="/#">lacoste</a>
+		</li>
+		<li>
+			<a href="/#">reebok</a>
+		</li>
+		<li>
+			<a href="/#">cat</a>
+		</li>
+		<li>
+			<a href="/#">dockers</a>
+		</li>
+	</ul>
+</div>
+</div>
+<div class="flex_col_6 flex">
+		<div class="gp-shoe-type-select-container-small">
+			<div class="gp-type-select-header-small">
+				WOMAN
+			</div>
+			<div class="gp-type-select-image-container-small">
+					<div class="gp-type-select-image-holder-small">
+						<img alt="woman-shoe" src="images/wshoe.jpg"/>	
+					</div>
+					<div class="specific-small">
+						<a href="#" ><img alt="woman-shoe-icon" src="images/icons/women-shoe.png"/></a>
+					</div>				
+			</div>
+			<div class="gp-type-select-text-small">
+				TOTAL
+			</div>
+			<div class="gp-type-select-items-small">
+				357 PRODUCTS
+			</div>
+			<div class="gp-list-icon-container-small">
+				<a href="#" ><img alt="list" src="images/icons/list-icon.png"/></a>
+			</div>	
+		</div>
+		<div class="gp-shoe-type-select-container-small">
+			<div class="gp-type-select-header-small">
+				MAN
+			</div>
+			<div class="gp-type-select-image-container-small">
+					<div class="gp-type-select-image-holder-small">
+						<img alt="man-shoe" src="images/mshoe.jpg"/>	
+					</div>
+					<div class="universal-small">
+						<a href="#" ><img alt="man-shoe-icon" src="images/icons/men-shoe.png"/></a>
+					</div>				
+			</div>
+			<div class="gp-type-select-text-small">
+				TOTAL
+			</div>
+			<div class="gp-type-select-items-small">
+				416 PRODUCTS
+			</div>
+			<div class="gp-list-icon-container-small">
+				<a href="#" ><img alt="list" src="images/icons/list-icon.png"/></a>
+			</div>	
+		</div>
+		<div class="gp-shoe-type-select-container-small">
+			<div class="gp-type-select-header-small">
+				KIDS
+			</div>
+			<div class="gp-type-select-image-container-small">
+					<div class="gp-type-select-image-holder-small">
+						<img alt="kid-shoe" src="images/kshoe.jpg"/>	
+					</div>
+					<div class="universal-small">
+						<a href="#" ><img alt="kid-shoe-icon-small" src="images/icons/kids-shoe.png"/></a>
+					</div>				
+			</div>
+			<div class="gp-type-select-text-small">
+				TOTAL
+			</div>
+			<div class="gp-type-select-items-small">
+				232 PRODUCTS
+			</div>
+			<div class="gp-list-icon-container-small">
+				<a href="#" ><img alt="list" src="images/icons/list-icon.png"/></a>
+			</div>	
+		</div>
+</div>
+<div class="flex_col_4">
+<div class="options-heading">SELECT COLOR</div>
+	<div id="color-picker">
+		<div></div><div></div><div></div><div></div><div></div>
+		<div></div><div></div><div></div><div></div><div></div>
+		<div></div><div></div><div></div><div></div><div></div>
+		<div></div><div></div><div></div><div></div><div></div>
+	</div>
+<div class="options-heading">PRICE RANGE</div>
+    <div>
+        <input type="text" id="range-slider" value="" name="range" />
+    </div>
+</div>
+</div>
+</div>
+<div class="row">
+<div *ngIf="product">
+<div class="col_12">
+		<div class="product-introduction"><p>{{product.category}}</p><p>{{product.name}}</p></div>
+</div>
+<div class="col_6">
+	<div class="product-main-image">
+		<img alt="image" [src]="product.images[0]" />
+	</div>
+	<div class="product-secondary-images">
+		<img alt="image" on-mouseover='changeimage(product.images[0])' [src]="product.images[0]" />
+		<img alt="image" on-mouseover='changeimage(product.images[1])' [src]="product.images[1]" />
+		<img alt="image" on-mouseover='changeimage(product.images[2])' [src]="product.images[2]" />
+	</div>
+</div>
+<div class="col_6">
+	<div class="product-info-container flex">
+	<div class="flex_75_row flex">
+	<div class="side produtct-rating">
+	<img alt="rating" src="images/icons/rating.png" />
+	<a href="/#">Read {{product.reviews}} reviews</a>
+	</div>
+	<div class="sale-product side">
+	{{product.saleprice | number:"1.2-2"}}
+	</div>
+	<div class="product-cost side">
+	{{product.price | number:"1.2-2"}}$
+	</div>
+	</div>
+
+	
+	<div class="flex_25_row flex">
+	<div class="save-from-product">
+	<img alt="pig" src="images/icons/pig-icon.png" />
+	<div>save 40%</div>
+	</div>
+	</div>
+	<p class="product-description-text" >
+	{{product.description}}
+	</p>
+	<div class="shipping-container">
+		<div>Free shipping</div>
+		<img alt="delivery" src="images/icons/deliver-cart-icon.png" />
+	</div>
+	<div class="properties-container">
+	<div class="qty-container" >
+	<label for="qty">Qty:</label>
+	<br>
+	<select>
+	  <option value="1">1</option>
+	  <option value="2">2</option>
+	  <option value="3">3</option>
+	  <option value="4">4</option>
+	</select>
+	</div>
+	<div class="size-container" >
+	<label for="size">Size:</label>
+	<br>
+	<select>
+	  <option value="" disabled selected>Select size</option>
+	  <option *ngFor="let size of product.availablesizes" value="{{size}}">{{size}}</option>
+	</select>
+	</div>
+	</div>
+	<div class="button-container">
+		<a href="/#" >Add to cart</a>
+	</div>
+	<div class="social-media-container">
+	<p>Share this:</p>
+	<div class="align-container">
+		<a href="/#" ><img alt="facebook" src="images/icons/fb-icon.png" /></a>
+		<a href="/#" ><img alt="twitter" src="images/icons/twitter.png" /></a>
+		<a href="/#" ><img alt="mail" src="images/icons/mail.png" /></a>
+		<a href="/#" ><img alt="print" src="images/icons/print.png" /></a>
+		<a href="/#" ><img alt="plus" src="images/icons/plus.png" /></a><div class="shares-holder">1.8M</div>
+	</div>
+	</div>
+	</div>
+</div>
+</div>
+<div class="col_12">
+		<div class="product-description-switch">
+		<button id="button-1" class="active" (click)="active('1'); descriptionSwitch(product.fulldescription, product.details)">PRODUCT OVERVIEW</button>
+		<button id="button-2" class="button" (click)="active('2'); descriptionSwitch(product.fulldescription, product.details)">FEATURES</button>
+		<button id="button-3" class="button" (click)="active('3'); descriptionSwitch(product.fulldescription, product.details)">CUSTOMER REVIEW</button>
+		<div class="product-description-container">
+		<div class='variable-procuct-description'>DESCRIPTION:</div>
+		<p>{{product.fulldescription}}</p>
+		<div class='variable-procuct-details'>DETAILS:</div>
+		<p *ngFor="let detail of product.details">- {{detail}}</p>
+		</div>
+		</div>
+</div> 
+
+</div>

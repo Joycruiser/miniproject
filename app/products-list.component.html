@@ -1,0 +1,136 @@
+<div class="fullwidth-row-slider spacer">
+<div class="col_12">
+  <div class="slider-pro" id="my-slider">
+    <div class="sp-slides">
+        <!-- Slide 1 -->
+		<div class="sp-slide" style="background-image:url('../images/promo.png')">
+		<div class="slide-container" >
+			<div class="paragraf1" >
+			WILL HELM
+			</div>
+			<div class="paragraf2" >
+			WINTER
+			</div>
+			<a class="gp-product-cost" href="/#" >99.90$</a>
+			<a class="gp-view-product" href="/#" >GET NOW</a>
+		</div>
+        </div>
+        
+        <!-- Slide 2 -->
+        <div class="sp-slide" style="background-image:url('../images/promo.png')">
+		<div class="slide-container" >
+			<div class="paragraf1" >
+			WILL HELM
+			</div>
+			<div class="paragraf2" >
+			WINTER
+			</div>
+			<a class="gp-product-cost" href="/#" >99.90$</a>
+			<a class="gp-view-product" href="/#" >GET NOW</a>
+		</div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<div class="row spacer" id="gp-shoe-type-select">
+	<div class="col_3">
+		<div class="gp-shoe-type-select-container">
+			<div class="gp-type-select-header">
+				WOMAN
+			</div>
+			<div class="gp-type-select-image-container">
+					<div class="gp-type-select-image-holder">
+						<img alt="woman-shoe" src="images/wshoe.jpg"/>	
+					</div>
+					<div class="specific">
+						<a href="#" ><img alt="woman-shoe-icon" src="images/icons/women-shoe.png"/></a>
+					</div>				
+			</div>
+			<div class="gp-type-select-text">
+				TOTAL
+			</div>
+			<div class="gp-type-select-items">
+				357 PRODUCTS
+			</div>
+			<div class="gp-list-icon-container">
+				<a href="#" ><img alt="list" src="images/icons/list-icon.png"/></a>
+			</div>	
+		</div>
+	</div>
+	<div class="col_3">
+		<div class="gp-shoe-type-select-container">
+			<div class="gp-type-select-header">
+				MAN
+			</div>
+			<div class="gp-type-select-image-container">
+					<div class="gp-type-select-image-holder">
+						<img alt="man-shoe" src="images/mshoe.jpg"/>	
+					</div>
+					<div class="universal">
+						<a href="#" ><img alt="man-shoe-icon" src="images/icons/men-shoe.png"/></a>
+					</div>				
+			</div>
+			<div class="gp-type-select-text">
+				TOTAL
+			</div>
+			<div class="gp-type-select-items">
+				416 PRODUCTS
+			</div>
+			<div class="gp-list-icon-container">
+				<a href="#" ><img alt="list" src="images/icons/list-icon.png"/></a>
+			</div>	
+		</div>
+	</div>
+	<div class="col_3">
+		<div class="gp-shoe-type-select-container">
+			<div class="gp-type-select-header">
+				KIDS
+			</div>
+			<div class="gp-type-select-image-container">
+					<div class="gp-type-select-image-holder">
+						<img alt="kid-shoe" src="images/kshoe.jpg"/>	
+					</div>
+					<div class="universal">
+						<a href="#" ><img alt="kid-shoe-icon" src="images/icons/kids-shoe.png"/></a>
+					</div>				
+			</div>
+			<div class="gp-type-select-text">
+				TOTAL
+			</div>
+			<div class="gp-type-select-items">
+				232 PRODUCTS
+			</div>
+			<div class="gp-list-icon-container">
+				<a href="#" ><img alt="list" src="images/icons/list-icon.png"/></a>
+			</div>	
+		</div>
+	</div>
+</div>
+<div class="row">
+<div class="col_12">
+<div class="gp-row-heading" ><div>SPECIAL</div><div>PRODUCTS</div><a href="/#">view all products</a></div>
+</div>
+</div>
+
+<div class="row">
+<div class="col_12 flex full-flex">
+	<div class="gp-box-container" *ngFor="let product of products">
+    <div class="side gp-box">
+		<div class="flex-icon">
+		<img alt="brandicon" [src]="product.brandicon"/>
+		</div>
+		<div class="flex-image">
+		<img alt="productimage" [src]="product.images[0]"/>
+		</div>
+		<div class="flex-name">
+			{{product.name}}
+		</div>
+		<div class="flex-row">
+			<a class="gp-product-cost" [routerLink]="['/detail', product.id]" >{{product.saleprice | number:"1.2-2"}}$</a>
+			<a class="gp-view-product" [routerLink]="['/detail', product.id]" >GET NOW</a>
+		</div>
+    </div>
+	</div>
+</div>
+</div>

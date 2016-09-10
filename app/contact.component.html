@@ -1,0 +1,31 @@
+<div class="row">
+<div class="col_12">
+<div [hidden]="submitted" class="contact-form">
+<div class="contact-form-header"> Contact Us</div>
+<form (ngSubmit)="send()" #contactForm="ngForm" novalidate>
+	<div>
+		<input placeholder="Name" type="test" id="fullName" name="fullName" [(ngModel)]="model.fullName" required pattern="[a-zA-Z0-9!#$%&'*+-/=?^_`{|}~. ]*" #fullName="ngModel" #spyName>
+		<div>
+		<div [hidden]="fullName.valid || (fullName.pristine)" class="form-alert">Name field cannot be empty</div>
+		</div>
+	</div>
+	<div>
+		<input placeholder="Email" type="email" id="email" name="email" [(ngModel)]="model.email" required pattern="[a-zA-Z0-9!#$%&'*+-/=?^_`{|}~.]+@+[a-zA-Z0-9]+[.]+[a-zA-Z0-9]+[]*" #email="ngModel" #spyEmail>
+	</div>
+	<div>
+	<div [hidden]="email.valid || (email.pristine)" class="form-alert">Not a valid e-mail</div>
+	</div>
+	<div>
+		<textarea placeholder="Message" id="message" [(ngModel)]="model.message" name="message" required pattern="[\n/a-zA-Z0-9!#$%&'*+-/=?^_`{|}~. ]*" #message="ngModel" #spyMessage></textarea>
+	</div>
+	<div>
+	<div [hidden]="message.valid || (message.pristine)" class="form-alert">Message field cannot be empty</div>
+	</div>
+	<button class="form-button" type="submit" [disabled]="!contactForm.valid">Submit</button>
+</form>
+</div>
+<div [hidden]="!submitted">
+<div class="contact-form-header"> Your message has been sent!</div>
+</div>
+</div>
+</div>
