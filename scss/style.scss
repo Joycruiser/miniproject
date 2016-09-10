@@ -1,0 +1,133 @@
+@import 'components';
+@import 'declarations';
+
+body {
+min-width: $page-width;
+margin: auto;
+background-color: $basic-bg-color;
+font-family: $basic-font;
+font-size: 14px;
+
+ul {
+margin-top:10px;
+margin-bottom:10px;
+padding-left:0px;
+}
+
+p {
+margin: 0px;
+}
+}
+
+/* Wrapper */
+.row {
+width:$page-width;
+margin:auto;
+z-index: 1;
+}
+
+.fullwidth-row {
+width:$page-full-width;
+margin: auto;
+}
+
+/* Column margins */
+.col_12, /* full width */
+.col_6, /* half width */
+.col_4, /* 1/3 width */
+.col_3 /* 1/4 width */
+{
+margin: 5px;
+display: inline;
+float: left;
+}
+
+/* First and Last */
+.first {
+
+}
+
+.last {
+
+}
+
+.full {
+
+}
+
+/* Column widths taking into account the margins */
+.col_12 {width:$page-width - 10px;}
+.col_6 {width:($page-width - 20px) / 2;}
+.col_4 {width:($page-width - 40px) / 4;}
+.col_3 {width:($page-width - 30px) / 3;}
+
+
+img {width:$page-full-width;}
+
+/*****************/
+/* MEDIA QUERIES */
+/*****************/
+
+/* Tablet Screen Sizes */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+/* Resize the body */
+body {min-width:$tablet-screen-width;}
+
+/* Resize the row */
+.row {width:$tablet-screen-width;}
+
+/* Resize the columns */
+.col_12 {width:$tablet-screen-width - 10px;}
+.col_6 {width:($tablet-screen-width - 20px) / 2;}
+.col_4 {width:($tablet-screen-width - 40px) / 4;}
+.col_3 {width:($tablet-screen-width - 30px) / 3;}
+
+@import 'responsive_declarations';
+
+}
+
+/* Mobile Landscape Screen Sizes */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+/* Resize the body */
+body {min-width:$mobile-screen-width;}
+
+/* Resize the row */
+.row {width:$mobile-screen-width;}
+
+/* Resize the columns */
+.col_12 {width:$mobile-screen-width - 10px;}
+.col_6 {width:$mobile-screen-width - 10px;}
+.col_4 {width:$mobile-screen-width - 10px;}
+.col_3 {width:$mobile-screen-width - 10px;}
+
+@import 'responsive_declarations';
+
+}
+
+/* Mobile Portrate Screen Sizes */
+@media only screen and (max-width: 479px) {
+/* Resize the body */
+body {min-width:$mobile-small-screen-width;}
+
+/* Resize the row */
+.row {width:$mobile-small-screen-width;}
+
+/* Resize the columns */
+.col_12 {width:$mobile-small-screen-width - 10px;}
+.col_9 {width:$mobile-small-screen-width - 10px;}
+.col_8 {width:$mobile-small-screen-width - 10px;}
+.col_6 {width:$mobile-small-screen-width - 10px;}
+.col_4 {width:$mobile-small-screen-width - 10px;}
+.col_3 {width:$mobile-small-screen-width - 10px;}
+
+@import 'responsive_declarations';
+
+}
+@media only screen and (max-width: 767px) {
+
+.button, .active {
+padding: 10px 3px 10px 3px !important;
+font-size:10px !important;
+}
+
+}
