@@ -42,19 +42,6 @@ display: inline;
 float: left;
 }
 
-/* First and Last */
-.first {
-
-}
-
-.last {
-
-}
-
-.full {
-
-}
-
 /* Column widths taking into account the margins */
 .col_12 {width:$page-width - 10px;}
 .col_6 {width:($page-width - 20px) / 2;}
